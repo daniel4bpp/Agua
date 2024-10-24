@@ -1,0 +1,710 @@
+#login-btn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+/* Estilos del formulario */
+#login-form {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+}
+
+.form-container {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+.form-container h2 {
+	margin-bottom: 20px;
+}
+
+.form-container label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.form-container input {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.form-container button {
+	width: 100%;
+	padding: 10px;
+	background-color: #28a745;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* Estilo para la "X" */
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	color: #aaa;
+}
+
+.close-btn:hover {
+	color: #000;
+}
+
+/*estilos generales */
+
+html, body {
+	height: 100%;
+	
+}
+
+
+
+/*modificador de modelo de cajas de css*/
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+*, *::before, *::after {
+	-webkit-box-sizing: inherit;
+			box-sizing: inherit;
+}
+
+/*resetear margenes y bordes*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	width: 90%;
+	max-width: 1366px;
+	margin: 0 auto;
+}
+/*estilos de los textos*/
+
+h2 {
+	font-size: 1.45rem;
+	margin-bottom: 20px;
+}
+
+p {
+	line-height: 1.8;
+	padding-right: 1em;
+	margin-bottom: 25px;
+}
+/*estilo de botones*/
+.btn {
+	display: block;
+	background-color: #7650a1;
+	width: 250px;
+	padding: 12px 1em;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #b700ff;
+}
+
+.btn:hover {
+	background-color: transparent;
+	color: #000;
+}
+
+.transparent {
+	display: inline-block;
+	border: 1px solid #ea00ff;
+	padding: 12px 1em;
+	width: 250px;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+}
+
+.transparent:hover {
+	background-color: #7650a1;
+	color: #fff;
+}
+/*barra de navegacion*/
+
+#navbar {
+	background-color: #0b1245;
+}
+
+#navegation {
+	display: flex;
+	justify-content: space-between;
+}
+
+#main-nav {
+	display: flex;
+	list-style: none;
+	font-family: 'Lato', sans-serif;
+	float: right;
+}
+
+#main-nav li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 25px 0.9em;
+	display: inline-block;
+}
+
+#main-nav li:last-child {
+	color: gold;
+	padding: 25px 0.9em;
+}
+
+#main-nav li a:hover {
+	background-color: #060829;
+}
+
+#navbar-toggle {
+	color: #fff;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 64px;
+	right: 35px;
+	display: none;
+}
+
+.top {
+	display: none;
+}
+/*pie de pagina*/
+footer {
+	background-color: #121018;
+}
+
+#PieDePagina {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+footer h3 {
+	color: #9f9f9f;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+}
+
+footer ul {
+	margin: 20px 0;
+}
+
+footer li {
+	list-style: none;
+	padding: 5px 0px;
+}
+
+footer ul li a {
+	color: #9f9f9f;
+	text-decoration: none;
+	font-size: 0.88rem;
+}
+
+
+
+#social {
+	text-align: center;
+}
+
+#social svg {
+	color: #fff;
+	margin-left: 1em;
+	font-size: 1.3rem;
+}
+
+#copyRight {
+	color: #9f9f9f;
+	text-align: center;
+	font-size: 0.8rem;
+	border-top: 1px solid #272323;
+	padding: 12px 0;
+}
+/*estilos de pagina de inicio*/
+/*seccion 1*/
+article#home > section:nth-child(1) {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.144), rgba(91, 69, 105, 0.9)), url(../images/cuidadodelagua.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+#seccionPrimera {
+	height: 100%;
+	min-height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#seccionPrimera h1 {
+	color: #fff;
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: arial, verdana, sans-serif;
+}
+
+#seccionPrimera p {
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 15px 0;
+	margin-bottom: 0;
+}
+
+#seccionPrimera div {
+	text-align: center;
+}
+
+#seccionPrimera a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	border: 1px solid;
+	display: inline-block;
+	padding: 12px 2.5em;
+	margin: 12px 0 0;
+}
+
+#seccionPrimera a:hover {
+	background-color: #aeaeae;
+	color: #000;
+}
+
+/*segunda seccion*/
+
+#seccionSegundo {
+	background-image: url(../images/Naturaleza\ hermosa\ -\ Océano\ Pacífico.mp4);
+	display: flex;
+	padding: 80px 0;
+}
+
+#seccionSegundo div {
+	padding: 0 0.5em;
+	align-self: center;
+	flex-basis: 60%;
+}
+
+#seccionSegundo img {
+	flex-basis: 40%;
+	max-width: 40%;
+	align-self: flex-start;
+}
+/*seccion tres*/
+
+article > section:nth-child(3) {
+	background-color: #f3f3f8;
+}
+
+#seccionTercera {
+	display: flex;
+}
+
+
+
+#seccionTercera div {
+	flex-basis: 50%;
+	padding-left: 2em;
+	align-self: center;
+}
+/*seccion cuatro*/
+
+article > section:nth-child(4) {
+	
+	text-align: center;
+	padding: 80px 0 12px;
+}
+
+#seccionCuarta {
+	display: flex;
+	margin: 80px auto;
+}
+
+.col {
+	margin: 0 0.9em;
+}
+
+.col svg {
+	margin-bottom: 25px;
+}
+
+.col h3 {
+	margin-bottom: 12px;
+	color: #3c3c3c;
+	font-size: 1.1rem;
+	font-weight: 100;
+}
+
+.col p {
+	font-size: 0.85rem;
+	text-align: justify;
+}
+/*seccion cinco*/
+
+article > section:nth-child(5) {
+	background-color: #f3f1fe;
+	padding: 50px 0;
+}
+#seccionQuinta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*estilos de las paginas*/
+
+main header {
+	background-image: url(../images/marxd.jpg);
+	background-size: 25px 50px;
+  background-size: 100% 100%;
+	background-color: #6516cca1;
+	padding: 45px 0;
+	margin-bottom: 40px;
+}
+
+main header h1 {
+	font-size: 1.9rem;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+#pages {
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: 80px;
+}
+
+aside {
+	flex-basis: 30%;
+}
+
+#pages section {
+	flex-basis: 70%;
+	padding-right: 1em;
+	text-align: justify;
+	margin-bottom: 50px;
+}
+
+aside h3 {
+	background-color: #f3f1fe;
+	padding: 15px 0 12px 0.5em;
+	margin-bottom: 20px;
+	font-size: 1.20rem;
+	font-weight: 100;
+}
+
+aside ul {
+	list-style: none;
+	margin: 0 0 25px 0.5em;
+}
+
+aside ul li a {
+	text-decoration: none;
+	line-height: 1.8;
+	color: #0b1245;
+}
+
+aside ul li a:hover {
+	text-decoration: underline;
+}
+
+#socialMedia {
+	margin: 0 0 0px 0.5em;
+	font-size: 2.5rem;
+}
+
+#socialMedia svg {
+	margin-right: 0.8em;
+	color: #0b1245;
+}
+
+#boletin {
+	margin-left: 0.5em;
+}
+
+#boletin p {
+	font-size: 1rem;
+	margin: 12px;
+}
+
+#boletin label {
+	display: block;
+	font-size: 0.95rem;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+input#correo {
+	display: block;
+	width: 100%;
+	height: 45px;
+	margin-bottom: 12px;
+}
+
+#boletin input[type="submit"] {
+	background-color: #008000;
+	display: inline-block;
+	padding: 10px 1em;
+	color: #fff;
+	border: none;
+	width: 150px;
+	font-size: 0.95rem;
+}
+
+.row {
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 22px;
+}
+
+.row img {
+	float: left;
+	width: 55%;
+	margin-right: 1em;
+	margin-bottom: 12px;
+}
+
+form {
+	margin-right: 1em;
+}
+
+.asterisco {
+	color: #ff0000;
+}
+
+label {
+	display: block;
+	margin: 10px 0;
+	font-size: 0.98rem;
+}
+
+input[type="text"], input[type="email"] {
+	display: inline-block;
+	width: 100%;
+	height: 45px;
+	margin: 5px 0;
+	border: 1px solid #ccc;
+}
+
+textarea#comentario {
+	width: 100%;
+	border: 1px solid #ccc;
+	margin-bottom: 30px;
+}
+
+input[type="submit"] {
+	background-color: #008000;
+	display: inline-block;
+	padding: 10px 1em;
+	width: 100%;
+	border: none;
+	color: #fff;
+	font-size: 1rem;
+}
+
+/*media queries*/
+@media screen and (max-width: 1199px) {
+	body {
+		font-size: 0.95rem;
+	}
+}
+
+/*estilos de viewport cuando tenga un tamaño que oscile entre 960px a 1100px*/
+
+@media screen and (min-width: 960px) and (max-width: 1100px) {
+
+	body {
+		font-size: 0.95rem;
+	}
+
+	#seccionPrimera h1 {
+	font-size: 2.5rem;
+}
+	#seccionPrimera h1 {
+	font-size: 2.5rem;
+}
+	h2 {
+	font-size: 1.3rem;
+}
+	#seccionTercera img {
+	flex-basis: 45%;
+	max-width: 45%;
+}
+#seccionTercera div {
+	flex-basis: 55%;
+	padding-right: 2em;
+}
+.col p {
+	text-align: center;
+}
+#pages {
+	margin-bottom: 12px;
+}
+#boletin p {
+	font-size: 0.95rem;
+}
+aside ul li a {
+	font-size: 0.95rem;
+}
+.row {
+	margin: 0 1em 25px 0;
+}
+.row img {
+	float: none;
+	width: 100%;
+}
+#pages .row:not(:last-child){
+	border-bottom: 1px solid #ccc;
+}
+.transparent {
+	margin-bottom: 30px;
+}
+.row svg {
+	margin-bottom: 20px;
+	margin-right: 1em;
+}
+}
+
+/*estilos de viewport cuando tenga un tamaño que sea igual o menor que 959px*/
+@media screen and (max-width: 959px) {
+	#seccionPrimera, #seccionSegunda, #seccionTercera, #seccionCuarta, #seccionQuinta {
+	flex-direction: column;
+}
+
+	#navegation {
+	display: block;
+}
+	#main-nav {
+	display: none;
+	flex-direction: column;
+}
+	#navbar-toggle {
+	display: block;
+}
+	#main-nav li a {
+	display: block;
+	padding: 20px 1em;
+}
+	#main-nav li:not(:last-child) {
+	border-bottom: 1px solid #353535;
+}
+	#main-nav li:last-child {
+	display: none;
+}
+.top {
+	background-color: #000;
+	color: gold;
+	padding: 12px 0;
+	font-size: 0.85rem;
+	display: block;
+}
+.top ul {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}
+#seccionPrimera h1 {
+	font-size: 1.25rem;
+}
+#seccionSegundo, #seccionTercera, #seccionCuarta, #seccionquinta {
+	flex-direction: column;
+}
+#seccionSegundo div, #seccionTercera div {
+	padding: 0;
+	align-self: normal;
+	flex-basis: 100%;
+	text-align: center;
+}
+.btn, .transparent {
+	width: 100%;
+}
+.transparent {
+	margin-bottom: 20px;
+}
+#seccionSegundo img, #seccionTercera img {
+	display: none;
+}
+#seccionTercera.container {
+	width: 90%;
+	padding: 20px 0;
+}
+article > section:nth-child(4) {
+	text-align: center;
+	padding: 35px 0 12px 0;
+}
+#seccionCuarta {
+	margin: 35px auto;
+}
+.col {
+	margin: 20px 0.9em 30px;
+	border: 1px solid #ffd43b;
+	padding: 30px 2em;
+}
+.col p {
+	text-align: center;
+}
+#seccionQuinta {
+	text-align: center;
+}
+/*estilos al resto de paginos*/
+#pages section {
+	flex-basis: 100%;
+	padding-right: 0;
+}
+aside {
+	flex-basis: 100%;
+}
+.row img {
+	float: none;
+	width: 100%;
+	flex: auto;
+}
+#pages .row:not(:last-child) {
+	border-bottom: 1px solid #ccc;
+}
+.row svg {
+	margin-bottom: 12px;
+	margin-right: 1em;
+}
+
+}
+/*estilos de viewport cuando tenga un tamaño que sea igual o menor que 659px*/
+@media screen and (max-width: 659) {
+	#PieDePagina {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+}
